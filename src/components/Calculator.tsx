@@ -26,18 +26,18 @@ const  Calculator: React.FC = () => {
     <Box sx={{ flexGrow: 1, marginTop: 20 }}>
       <Grid container spacing={2}>
         <Grid item xs={3}>
-          <TextField id="outlined-basic" label="First Value" variant="outlined" value={firstVal} onChange={(e) => setFirstVal(e.target.value)} />
+          <TextField id="outlined-basic" label="First Value" variant="outlined" value={firstVal} onChange={(e: any) => setFirstVal(e.target.value)} />
         </Grid>
         <Grid item xs={2}>
           <Autocomplete 
             disablePortal
             id="combo-box-demo"
             options={Operators}
-            renderInput={(params) => <TextField {...params} label="Movie" sx={{ width: 100 }} onChange={(e) => setOpr(e.target.value)} />}
+            renderInput={(params: any) => <TextField {...params} label="Operator" sx={{ width: 100 }} onChange={(e) => setOpr(e.target.value)} />}
           />
         </Grid>
         <Grid item xs={3}>
-          <TextField id="outlined-basic" label="Second Value" variant="outlined" value={secondVal} onChange={(e) => setSecondVal(e.target.value)} />
+          <TextField id="outlined-basic" label="Second Value" variant="outlined" value={secondVal} onChange={(e: any) => setSecondVal(e.target.value)} />
         </Grid>
         <Grid item xs={1} sx={{ display: 'flex', alignItems: 'center' }}>
           <Button variant="contained" sx={{ height: '100%' }} onClick={handleOperator}>Calculate</Button>
